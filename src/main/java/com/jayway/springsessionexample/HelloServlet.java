@@ -14,6 +14,13 @@ public class HelloServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+    	Test t = new Test();
+    	req.getSession().setAttribute("a", t);
+    	
+    	t= (Test)req.getSession().getAttribute("a");
+    	
+    	System.out.println(t.getT().getN());
+    	
         String name = Optional.ofNullable(req.getSession(false))
                 .map(session -> (String) session.getAttribute(NAME))
                 .orElse("World");
