@@ -16,9 +16,9 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
     	Test t = new Test();
-    	req.getSession().setAttribute("aa", t);
+    	req.getSession().setAttribute("aaa", t);
     	
-    	t= (Test)req.getSession().getAttribute("aa");
+    	t= (Test)req.getSession().getAttribute("aaa");
     	
     	System.out.println(t.getT().getN());
     	
