@@ -23,6 +23,11 @@
      <property name="connectionFactory" ref="jedisWriteConnectionFactory"></property>
      <property name="keySerializer" ref="fstRedisSerializer"></property>
      <property name="hashKeySerializer" ref="fstRedisSerializer"></property>
+    <property name="defaultSerializer" ref="fstRedisSerializer"></property>
+     <property name="valueSerializer" ref="fstRedisSerializer"></property>
+     <property name="hashValueSerializer" ref="fstRedisSerializer"></property>
+    
+  
  </bean>
  
 

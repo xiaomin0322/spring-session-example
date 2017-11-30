@@ -1,12 +1,13 @@
 package com.jayway.springsessionexample;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.Optional;
+
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.Optional;
 
 public class HelloServlet extends HttpServlet {
 
@@ -15,9 +16,9 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
     	Test t = new Test();
-    	req.getSession().setAttribute("a", t);
+    	req.getSession().setAttribute("aa", t);
     	
-    	t= (Test)req.getSession().getAttribute("a");
+    	t= (Test)req.getSession().getAttribute("aa");
     	
     	System.out.println(t.getT().getN());
     	
