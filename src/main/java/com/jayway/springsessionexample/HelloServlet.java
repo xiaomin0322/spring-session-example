@@ -17,10 +17,10 @@ public class HelloServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
     	Test t = new Test();
     	req.getSession().setAttribute("aaa", t);
-    	
+    	req.getSession().removeAttribute("aaa");
     	t= (Test)req.getSession().getAttribute("aaa");
     	
-    	System.out.println(t.getT().getN());
+    	//System.out.println(t.getT().getN());
     	
         String name = Optional.ofNullable(req.getSession(false))
                 .map(session -> (String) session.getAttribute(NAME))
