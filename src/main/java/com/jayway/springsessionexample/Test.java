@@ -1,7 +1,13 @@
 package com.jayway.springsessionexample;
 
-public class Test {
+import java.io.Serializable;
+
+public class Test implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String name  = "123";
 	private T t = new T();
 	public String getName() {
@@ -20,7 +26,7 @@ public class Test {
 
 }
 
-class T{
+class T implements Serializable{
 	private String n="1231";
 
 	public String getN() {

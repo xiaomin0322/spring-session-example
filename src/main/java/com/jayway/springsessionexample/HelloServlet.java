@@ -15,10 +15,13 @@ public class HelloServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-    	Test t = new Test();
+    	/*Test t = new Test();
     	req.getSession().setAttribute("aaa", t);
+    	req.getSession().setAttribute("bbb", t);
     	req.getSession().removeAttribute("aaa");
-    	t= (Test)req.getSession().getAttribute("aaa");
+    	t= (Test)req.getSession().getAttribute("aaa");*/
+    	
+    	req.getSession().removeAttribute("aaa");
     	
     	//System.out.println(t.getT().getN());
     	
